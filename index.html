@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Call artisti · L8xilFuturo 2026</title>
+  <meta name="description" content="Hai tra i 15 e i 25 anni e ami suonare, cantare o stare su un palco? Candidati per L8xilFuturo 2026, il 9 dicembre al Teatro La Fenice di Senigallia.">
+  <meta name="theme-color" content="#0b0b0d">
+  <meta property="og:title" content="Call artisti · L8xilFuturo 2026">
+  <meta property="og:description" content="Il 9 dicembre sul palco del Teatro La Fenice di Senigallia. Candidature entro il 22 novembre.">
+  <meta property="og:type" content="website">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============ HERO ============ -->
+  <header class="hero">
+    <div class="orbs" aria-hidden="true">
+      <span class="orb orb--yellow"></span>
+      <span class="orb orb--blue"></span>
+    </div>
+
+    <div class="hero__inner">
+      <img class="brand__img" src="logo-scuolazoo-cogeu.png" alt="ScuolaZoo × Cogeu" width="480" height="280">
+
+      <p class="eyebrow">L8xilFuturo · Call per artisti 2026</p>
+      <h1 class="hero__title">Il palco<br><span class="hl">ti aspetta.</span></h1>
+
+      <p class="hero__lead">
+        Hai tra i 15 e i 25 anni e ami suonare, cantare o stare su un palco?
+        Allora potresti essere proprio la persona che stiamo cercando.
+      </p>
+
+      <ul class="chips">
+        <li><strong>9 dicembre</strong> Teatro La Fenice, Senigallia</li>
+        <li><strong>15 – 25 anni</strong> solisti e band</li>
+        <li><strong>Entro il 22/11</strong> <span id="countdown">candidature aperte</span></li>
+      </ul>
+
+      <a class="btn btn--primary" href="#candidatura">Candidati ora <span aria-hidden="true">↓</span></a>
+    </div>
+  </header>
+
+  <!-- ============ INTRO ============ -->
+  <section class="intro">
+    <p>
+      Il prossimo <strong>L8xilFuturo</strong> sta arrivando e questa potrebbe essere la tua occasione
+      per salire sul palco del <strong>Teatro La Fenice di Senigallia</strong>, accendere i riflettori
+      e portare la tua musica davanti al pubblico.
+    </p>
+    <p class="intro__big">Cerchiamo talenti pronti a farsi sentire, emozionare e, soprattutto, a <span class="hl">spaccare</span>.</p>
+  </section>
+
+  <!-- ============ FORM ============ -->
+  <main id="candidatura" class="form-wrap">
+
+    <div id="closed" class="notice notice--closed" hidden>
+      <h2>Candidature chiuse</h2>
+      <p>Il termine per candidarsi era il 22 novembre. Grazie a tutte e tutti, ci vediamo il 9 dicembre al Teatro La Fenice!</p>
+    </div>
+
+    <form id="form" novalidate autocomplete="on">
+      <!-- honeypot anti-bot: invisibile alle persone -->
+      <div class="hp" aria-hidden="true">
+        <label>Lascia vuoto <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+      </div>
+
+      <!-- 01 -->
+      <fieldset class="step">
+        <legend><span class="step__n">01</span> Chi sei</legend>
+
+        <div class="grid">
+          <div class="field">
+            <label for="nome">Nome *</label>
+            <input id="nome" name="nome" type="text" required maxlength="60" autocomplete="given-name">
+          </div>
+          <div class="field">
+            <label for="cognome">Cognome *</label>
+            <input id="cognome" name="cognome" type="text" required maxlength="60" autocomplete="family-name">
+          </div>
+          <div class="field field--full">
+            <label for="nomeArte">Nome d'arte *</label>
+            <input id="nomeArte" name="nomeArte" type="text" required maxlength="60" placeholder="Come vuoi essere chiamato/a sul palco (o nome della band)">
+          </div>
+          <div class="field">
+            <label for="eta">Quanti anni hai? *</label>
+            <input id="eta" name="eta" type="number" inputmode="numeric" required min="15" max="25" placeholder="15 – 25">
+          </div>
+          <div class="field">
+            <label for="provenienza">Di dove sei? *</label>
+            <input id="provenienza" name="provenienza" type="text" required maxlength="80" placeholder="Città / paese" autocomplete="address-level2">
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- 02 -->
+      <fieldset class="step">
+        <legend><span class="step__n">02</span> La tua musica</legend>
+
+        <div class="field">
+          <label for="presentazione">Presentati *</label>
+          <textarea id="presentazione" name="presentazione" required minlength="20" maxlength="1500" rows="6"
+            placeholder="Raccontaci chi sei, che genere fai, da quanto suoni o canti, se sei solista o band, cosa vorresti portare sul palco…"></textarea>
+          <div class="hint"><span id="charCount">0</span> / 1500</div>
+        </div>
+
+        <div class="field">
+          <span class="label">Allega i tuoi brani (max 2) *</span>
+          <label class="drop" id="drop" for="files">
+            <input id="files" type="file" accept="audio/*,.mp3,.wav,.m4a,.aac,.ogg,.flac" multiple>
+            <span class="drop__icon" aria-hidden="true">♪</span>
+            <span class="drop__text"><strong>Tocca per scegliere</strong> o trascina qui i file</span>
+            <span class="drop__sub">MP3, WAV, M4A, AAC, OGG, FLAC · max <span class="maxmb">10</span> MB ciascuno</span>
+          </label>
+          <ul class="filelist" id="filelist"></ul>
+        </div>
+
+        <div class="field">
+          <label for="link">…oppure un link ai brani</label>
+          <input id="link" name="link" type="url" maxlength="300" placeholder="https://soundcloud.com/… · YouTube · Spotify · Google Drive">
+          <div class="hint">Utile se i file sono troppo pesanti. Serve almeno un file <em>oppure</em> un link.</div>
+        </div>
+      </fieldset>
+
+      <!-- 03 -->
+      <fieldset class="step">
+        <legend><span class="step__n">03</span> Contatti</legend>
+
+        <div class="grid">
+          <div class="field">
+            <label for="email">Email *</label>
+            <input id="email" name="email" type="email" required maxlength="120" autocomplete="email" placeholder="nome@email.com">
+          </div>
+          <div class="field">
+            <label for="telefono">Telefono *</label>
+            <input id="telefono" name="telefono" type="tel" required maxlength="20" autocomplete="tel" placeholder="+39 333 123 4567">
+          </div>
+          <div class="field">
+            <label for="instagram">Instagram</label>
+            <div class="prefix"><span>@</span><input id="instagram" name="instagram" type="text" maxlength="60" placeholder="tuonome"></div>
+          </div>
+          <div class="field">
+            <label for="altriSocial">Altri social</label>
+            <input id="altriSocial" name="altriSocial" type="text" maxlength="200" placeholder="TikTok, YouTube, Spotify…">
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- 04 -->
+      <fieldset class="step">
+        <legend><span class="step__n">04</span> Ultimo passo</legend>
+
+        <div id="minorBox" class="check-wrap" hidden>
+          <label class="check">
+            <input type="checkbox" id="genitore" name="genitore">
+            <span>Sono minorenne e un genitore (o chi ne fa le veci) è informato della mia candidatura. Se verrò selezionato/a, mi verrà chiesta la sua autorizzazione firmata. *</span>
+          </label>
+        </div>
+
+        <label class="check">
+          <input type="checkbox" id="privacy" name="privacy" required>
+          <span>Ho letto l'<button type="button" class="linkbtn" id="openPrivacy">informativa privacy</button> e acconsento al trattamento dei miei dati per la selezione degli artisti di L8xilFuturo 2026. *</span>
+        </label>
+
+        <div id="formError" class="form-error" role="alert" hidden></div>
+
+        <button type="submit" class="btn btn--primary btn--block" id="submitBtn">
+          <span class="btn__label">Invia la candidatura</span>
+          <span class="btn__spinner" aria-hidden="true"></span>
+        </button>
+        <p class="hint center">* campi obbligatori</p>
+      </fieldset>
+    </form>
+
+    <div id="success" class="notice notice--success" hidden tabindex="-1">
+      <div class="success__orbs" aria-hidden="true"><i></i><i></i></div>
+      <h2>Candidatura inviata!</h2>
+      <p>Grazie <strong id="successName"></strong>, abbiamo ricevuto tutto. Ti contatteremo a breve via email o telefono.</p>
+      <p class="hint">Ora tocca a te: scaldati la voce. 🚀</p>
+    </div>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <p class="footer__label">In collaborazione con</p>
+    <div class="partners">
+      <img src="stemma-senigallia.jpg" alt="Comune di Senigallia" class="partner partner--comune" width="280" height="269" loading="lazy">
+    </div>
+    <p class="footer__small">L8xilFuturo 2026 · Teatro La Fenice, Senigallia · 9 dicembre</p>
+  </footer>
+
+  <!-- ============ PRIVACY ============ -->
+  <dialog id="privacyDialog" class="dialog">
+    <div class="dialog__body">
+      <h2>Informativa privacy</h2>
+      <p class="hint">Art. 13 Regolamento UE 2016/679 (GDPR)</p>
+
+      <h3>Titolare del trattamento</h3>
+      <p>Vanessa Morganti, email: <a href="mailto:morgantivanessa2002@gmail.com">morgantivanessa2002@gmail.com</a>.</p>
+
+      <h3>Quali dati e perché</h3>
+      <p>Raccogliamo nome, cognome, nome d'arte, età, provenienza, email, telefono, profili social, la tua presentazione e i brani che invii, al solo scopo di valutare la candidatura, selezionare gli artisti per L8xilFuturo 2026 e contattarti per l'organizzazione dell'evento. La base giuridica è il tuo consenso.</p>
+
+      <h3>Chi li vede</h3>
+      <p>I dati sono conservati in un archivio privato accessibile solo agli organizzatori. Non vengono pubblicati, venduti o ceduti a terzi. I brani vengono ascoltati solo dalla commissione di selezione.</p>
+
+      <h3>Per quanto tempo</h3>
+      <p>Per il tempo necessario alla selezione e all'organizzazione dell'evento e comunque non oltre il 31 dicembre 2026, dopodiché vengono cancellati.</p>
+
+      <h3>Minorenni</h3>
+      <p>Possono candidarsi persone dai 15 anni in su (in Italia il consenso al trattamento dei dati online è valido dai 14 anni). Per la partecipazione all'evento dei minorenni selezionati sarà richiesta l'autorizzazione di un genitore o di chi ne fa le veci.</p>
+
+      <h3>I tuoi diritti</h3>
+      <p>Puoi chiedere in qualsiasi momento di accedere ai tuoi dati, correggerli, cancellarli o revocare il consenso scrivendo a <a href="mailto:morgantivanessa2002@gmail.com">morgantivanessa2002@gmail.com</a>. Hai anche diritto di proporre reclamo al Garante per la protezione dei dati personali.</p>
+
+      <form method="dialog"><button class="btn btn--primary btn--block">Ho capito</button></form>
+    </div>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>
