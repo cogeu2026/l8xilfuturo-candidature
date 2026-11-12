@@ -170,6 +170,7 @@ const CONFIG = {
         nome: val("nome"), cognome: val("cognome"), nomeArte: val("nomeArte"),
         eta: Number(val("eta")), provenienza: val("provenienza"),
         presentazione: val("presentazione"),
+        strumentazione: val("strumentazione"), esigenze: val("esigenze"),
         email: val("email"), telefono: val("telefono"),
         instagram: val("instagram").replace(/^@/, ""), altriSocial: val("altriSocial"),
         link: val("link"),
