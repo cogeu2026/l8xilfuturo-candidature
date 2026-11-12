@@ -174,12 +174,11 @@ input[type=number]::-webkit-inner-spin-button{opacity:.4}
 .check-wrap{margin-bottom:14px}
 .check{display:flex;gap:14px;align-items:flex-start;font-weight:400;font-size:.95rem;color:#d6d6d0;cursor:pointer;margin-bottom:18px}
 .check input{
-  flex:none;-webkit-appearance:none;appearance:none;width:26px;height:26px;margin:0;border-radius:8px;
-  border:2px solid #4a4a55;background:#0a0a0c;display:grid;place-items:center;cursor:pointer;transition:.15s;
+  flex:0 0 26px;-webkit-appearance:none;appearance:none;width:26px;height:26px;min-width:26px;margin:1px 0 0;padding:0;border-radius:8px;
+  border:2px solid #4a4a55;background:#0a0a0c center/16px 16px no-repeat;display:block;position:static;cursor:pointer;transition:.15s;
 }
-.check input::after{content:"";width:12px;height:7px;border-left:3px solid #111;border-bottom:3px solid #111;transform:rotate(-45deg) translate(1px,-1px);opacity:0}
-.check input:checked{background:var(--yellow);border-color:var(--yellow)}
-.check input:checked::after{opacity:1}
+.check span{flex:1;min-width:0}
+.check input:checked{background-color:var(--yellow);border-color:var(--yellow);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3 8.5l3.2 3L13 4.5' fill='none' stroke='%23111' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")}
 .check input:focus-visible{outline:3px solid var(--blue-2);outline-offset:2px}
 .check.is-invalid input{border-color:var(--danger)}
 .linkbtn{background:none;border:0;padding:0;font:inherit;color:var(--yellow);text-decoration:underline;cursor:pointer}
