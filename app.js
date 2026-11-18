@@ -5,7 +5,7 @@ const CONFIG = {
   // URL della Web App di Google Apps Script (finisce con /exec). Vedi README.md
   ENDPOINT: "https://script.google.com/macros/s/AKfycbyxoGLRkxxSe6omentWfhqeSt2O850i2Yk9A7-uPR4nG5Q-XSU9rbLGQo7aZUS3g0Mn/exec",
   // Chiusura candidature (ora italiana)
-  DEADLINE: "2026-11-22T23:59:59+01:00",
+  DEADLINE: "2026-11-29T23:59:59+01:00",
   MAX_FILES: 2,
   MAX_FILE_MB: 10,
   ALLOWED_EXT: ["mp3", "wav", "m4a", "aac", "ogg", "flac"],
